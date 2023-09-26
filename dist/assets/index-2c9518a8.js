@@ -1,4 +1,4 @@
-import{s as r,j as t,D as u,E as f,r as x,T as b,B as g,x as y,y as w}from"./index-9e51e997.js";import{Q as v}from"./index.es-cd771b5f.js";const j=r.div`
+import{s as r,j as t,D as h,E as m,r as f,T as u,B as b,x as g,y}from"./index-fa6f74a8.js";import{Q as w}from"./index.es-da91cba9.js";const v=r.div`
 
     .rdt_TableHead {
         .rdt_TableHeadRow {
@@ -49,7 +49,7 @@ import{s as r,j as t,D as u,E as f,r as x,T as b,B as g,x as y,y as w}from"./ind
         margin-right: auto;
         margin-top: 16px;
     }
-`,C=({columns:e,data:s,responsive:d=!0,noTableHead:i=!1,pagination:h=!1,selectableRows:a=!1,toggleClearSelectedRows:n=!1,onSelectedRowsChange:l})=>{const c=p=>{l&&l(p)};return t.jsx(j,{children:t.jsx(v,{columns:e,data:s,progressComponent:t.jsx("p",{children:"Loading..."}),noDataComponent:t.jsx("p",{style:{lineHeight:"normal"},children:"No register to show."}),noTableHead:i,pagination:h,paginationRowsPerPageOptions:[5,10,15,30],customStyles:{headRow:{style:{fontSize:"1rem"}},cells:{style:{fontSize:"1rem"}}},responsive:d,selectableRows:a,onSelectedRowsChange:c,clearSelectedRows:n})})},k=r.div`
+`,j=({columns:e,data:n,responsive:s=!0,noTableHead:i=!1,pagination:x=!1,selectableRows:a=!1,toggleClearSelectedRows:d=!1,onSelectedRowsChange:l})=>{const c=p=>{l&&l(p)};return t.jsx(v,{children:t.jsx(w,{columns:e,data:n,progressComponent:t.jsx("p",{children:"Loading..."}),noDataComponent:t.jsx("p",{style:{lineHeight:"normal"},children:"No register to show."}),noTableHead:i,pagination:x,paginationRowsPerPageOptions:[5,10,15,30],customStyles:{headRow:{style:{fontSize:"1rem"}},cells:{style:{fontSize:"1rem"}}},responsive:s,selectableRows:a,onSelectedRowsChange:c,clearSelectedRows:d})})},C=r.div`
     display: flex;
     column-gap: 16px;
 
@@ -72,15 +72,15 @@ import{s as r,j as t,D as u,E as f,r as x,T as b,B as g,x as y,y as w}from"./ind
     button {
         color: #394E6D;
     }
-`,T=({children:e})=>t.jsx(k,{children:e}),$=r.div`
+`,k=({children:e})=>t.jsx(C,{children:e}),T=r.div`
 
-`,R=r.div`
+`,$=r.div`
   display: flex;
   height: calc(100vh - 80px);
-`,_=r.div`
+`,R=r.div`
   width: 100%;
   overflow-y: auto;
-`,P=r.div`
+`,_=r.div`
   padding: 0 32px;
   row-gap: 16px;
   display: flex;
@@ -145,7 +145,7 @@ import{s as r,j as t,D as u,E as f,r as x,T as b,B as g,x as y,y as w}from"./ind
 `;r.div`
   display: flex;
   justify-content: space-between;
-`;const E=r.span`
+`;const P=r.span`
   display: flex;
   gap: 32px;
   /* padding: 0 32px; */
@@ -158,4 +158,4 @@ import{s as r,j as t,D as u,E as f,r as x,T as b,B as g,x as y,y as w}from"./ind
     width: 22px;
     height: 22px;
   }
-`;const N=()=>{const{fetchProfileAdminList:e,setProfileEditingById:s,removeProfileById:d,profileAdminList:i,loadingFetch:h}=u(),a=f(),n=x.useRef(!0),l=[{name:"Name",cell:o=>o.name},{name:"Status",cell:o=>o.status},{name:"Actions",width:"80px",cell:o=>t.jsxs(T,{"aria-label":"Action buttons",children:[t.jsx("button",{onClick:()=>p(o.id),"aria-label":"Edit user action",children:t.jsx(y,{})}),t.jsx("button",{onClick:()=>c(o.id),"aria-label":"Remove user action",children:t.jsx(w,{})})]})}],c=o=>{d(o)},p=o=>{s(o),a(`/profile-admin/edit/${o}`)},m=()=>{a("/profile-admin/create")};return x.useEffect(()=>{n.current||e()},[e]),x.useEffect(()=>()=>{n.current=!1},[]),t.jsx($,{className:"profile-admin-container",children:t.jsx(R,{className:"content-wrapper",children:t.jsx(_,{children:t.jsxs(P,{children:[t.jsx(b,{children:"Profile Administration"}),t.jsx(E,{children:t.jsx(g,{btnTheme:"primary",onClick:m,children:"Create New Item"})}),t.jsx(C,{columns:l,data:(i==null?void 0:i.map(o=>({id:o.id,name:o.name,status:o.status})))||[]})]})})})})};export{N as default};
+`;const F=()=>{const{fetchProfileAdminList:e,setProfileEditingById:n,removeProfileById:s,profileAdminList:i,loadingFetch:x}=h(),a=m(),d=[{name:"Name",cell:o=>o.name},{name:"Status",cell:o=>o.status},{name:"Actions",width:"80px",cell:o=>t.jsxs(k,{"aria-label":"Action buttons",children:[t.jsx("button",{onClick:()=>c(o.id),"aria-label":"Edit user action",children:t.jsx(g,{})}),t.jsx("button",{onClick:()=>l(o.id),"aria-label":"Remove user action",children:t.jsx(y,{})})]})}],l=o=>{s(o)},c=o=>{n(o),a(`/profile-admin/edit/${o}`)},p=()=>{a("/profile-admin/create")};return f.useEffect(()=>{e()},[e]),t.jsx(T,{className:"profile-admin-container",children:t.jsx($,{className:"content-wrapper",children:t.jsx(R,{children:t.jsxs(_,{children:[t.jsx(u,{children:"Profile Administration"}),t.jsx(P,{children:t.jsx(b,{btnTheme:"primary",onClick:p,children:"Create New Item"})}),t.jsx(j,{columns:d,data:(i==null?void 0:i.map(o=>({id:o.id,name:o.name,status:o.status})))||[]})]})})})})};export{F as default};
