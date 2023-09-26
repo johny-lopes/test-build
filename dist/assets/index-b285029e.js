@@ -1,4 +1,4 @@
-import{s as o,r,j as e,u as q,a as B,I as N,R as L,l as I,b as W,B as D,M as A,F as j,T as E}from"./index-db52d6f6.js";import{R as O}from"./warning-bc0976b2.js";import{R as V,d as H}from"./empty-profile-dd7ae0f7.js";import{Q as G}from"./index.es-3a94ad4c.js";const Q=o.div`
+import{s as o,r,j as e,u as q,a as B,I as N,R as L,l as I,b as W,B as D,M as A,F as j,T as E}from"./index-18a85b89.js";import{R as O}from"./warning-ea7c188a.js";import{R as V,d as H}from"./empty-profile-4f454130.js";import{Q as G}from"./index.es-b3d3b164.js";const Q=o.div`
   display: flex;
   flex-direction: row;
 
@@ -511,10 +511,6 @@ import{s as o,r,j as e,u as q,a as B,I as N,R as L,l as I,b as W,B as D,M as A,F
       overflow-y: hidden;
       text-align: justify;
       color: var(--gray3);
-
-      font-family: artifex-cf, serif !important;
-      font-style: normal;
-      font-weight: 400;
     }
 
     &:nth-child(6) {
