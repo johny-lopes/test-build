@@ -1,31 +1,23 @@
-import{s as r,j as t,D as h,E as m,r as f,T as u,B as b,x as g,y}from"./index-18a85b89.js";import{Q as w}from"./index.es-b3d3b164.js";const v=r.div`
+import{s as i,j as t,D as h,E as m,r as u,T as f,B as g,x as b,y}from"./index-96b06510.js";import{Q as w}from"./index.es-6a321b83.js";const v=i.div`
 
     .rdt_TableHead {
         .rdt_TableHeadRow {
-            background-color: ${e=>e.theme.colors.secondary};
+            background-color: ${e=>e.theme.colors.tableTitle};
             color: ${e=>e.theme.colors.darkGrey};
+            font-weight: bold;
         }
     }
 
     .rdt_TableHeadRow, .rdt_TableRow {
-        background-color: ${e=>e.theme.colors.primary};
         background-color: ${e=>e.theme.colors.background};
         color: ${e=>e.theme.colors.darkGrey};
-        border-bottom-color: ${e=>e.theme.colors.grey};
         min-height: 51px;
         font-weight: 300;
-    }
+        border: transparent;
 
-    .rdt_TableHeadRow:first-of-type {
-        border-top-style: solid;
-        border-top-width: 1px;
-        border-top-color: ${e=>e.theme.colors.grey};
-    }
-
-    .rdt_TableRow:last-of-type {
-        border-bottom-style: solid;
-        border-bottom-width: 1px;
-        border-bottom-color: ${e=>e.theme.colors.grey};
+        &:nth-child(even) {
+            background:${e=>e.theme.colors.tableStripedRow};
+        }
     }
 
     .rdt_TableCol:first-of-type,
@@ -49,7 +41,7 @@ import{s as r,j as t,D as h,E as m,r as f,T as u,B as b,x as g,y}from"./index-18
         margin-right: auto;
         margin-top: 16px;
     }
-`,j=({columns:e,data:n,responsive:s=!0,noTableHead:i=!1,pagination:x=!1,selectableRows:a=!1,toggleClearSelectedRows:d=!1,onSelectedRowsChange:l})=>{const c=p=>{l&&l(p)};return t.jsx(v,{children:t.jsx(w,{columns:e,data:n,progressComponent:t.jsx("p",{children:"Loading..."}),noDataComponent:t.jsx("p",{style:{lineHeight:"normal"},children:"No register to show."}),noTableHead:i,pagination:x,paginationRowsPerPageOptions:[5,10,15,30],customStyles:{headRow:{style:{fontSize:"1rem"}},cells:{style:{fontSize:"1rem"}}},responsive:s,selectableRows:a,onSelectedRowsChange:c,clearSelectedRows:d})})},C=r.div`
+`,j=({columns:e,data:l,responsive:s=!0,noTableHead:r=!1,pagination:x=!1,selectableRows:a=!1,toggleClearSelectedRows:d=!1,onSelectedRowsChange:n})=>{const c=p=>{n&&n(p)};return t.jsx(v,{children:t.jsx(w,{columns:e,data:l,progressComponent:t.jsx("p",{children:"Loading..."}),noDataComponent:t.jsx("p",{style:{lineHeight:"normal"},children:"No register to show."}),noTableHead:r,pagination:x,paginationRowsPerPageOptions:[5,10,15,30],customStyles:{headRow:{style:{fontSize:"1rem"}},cells:{style:{fontSize:"1rem"}}},responsive:s,selectableRows:a,onSelectedRowsChange:c,clearSelectedRows:d})})},C=i.div`
     display: flex;
     column-gap: 16px;
 
@@ -72,20 +64,20 @@ import{s as r,j as t,D as h,E as m,r as f,T as u,B as b,x as g,y}from"./index-18
     button {
         color: #394E6D;
     }
-`,k=({children:e})=>t.jsx(C,{children:e}),T=r.div`
+`,k=({children:e})=>t.jsx(C,{children:e}),T=i.div`
 
-`,$=r.div`
+`,$=i.div`
   display: flex;
   height: calc(100vh - 80px);
-`,R=r.div`
+`,R=i.div`
   width: 100%;
   overflow-y: auto;
-`,_=r.div`
+`,P=i.div`
   padding: 0 32px;
   row-gap: 16px;
   display: flex;
   flex-direction: column;  
-`;r.div`
+`;i.div`
   display: flex;
   flex-direction: column;
   background: #FFF;
@@ -142,14 +134,14 @@ import{s as r,j as t,D as h,E as m,r as f,T as u,B as b,x as g,y}from"./index-18
       width: 48px;
     }
   }
-`;r.div`
+`;i.div`
   display: flex;
   justify-content: space-between;
-`;const P=r.span`
+`;const _=i.span`
   display: flex;
   gap: 32px;
   /* padding: 0 32px; */
-`;r.button`
+`;i.button`
   display: flex;
   align-items: center;
   gap: 10px;
@@ -158,4 +150,4 @@ import{s as r,j as t,D as h,E as m,r as f,T as u,B as b,x as g,y}from"./index-18
     width: 22px;
     height: 22px;
   }
-`;const F=()=>{const{fetchProfileAdminList:e,setProfileEditingById:n,removeProfileById:s,profileAdminList:i,loadingFetch:x}=h(),a=m(),d=[{name:"Name",cell:o=>o.name},{name:"Status",cell:o=>o.status},{name:"Actions",width:"80px",cell:o=>t.jsxs(k,{"aria-label":"Action buttons",children:[t.jsx("button",{onClick:()=>c(o.id),"aria-label":"Edit user action",children:t.jsx(g,{})}),t.jsx("button",{onClick:()=>l(o.id),"aria-label":"Remove user action",children:t.jsx(y,{})})]})}],l=o=>{s(o)},c=o=>{n(o),a(`/profile-admin/edit/${o}`)},p=()=>{a("/profile-admin/create")};return f.useEffect(()=>{e()},[e]),t.jsx(T,{className:"profile-admin-container",children:t.jsx($,{className:"content-wrapper",children:t.jsx(R,{children:t.jsxs(_,{children:[t.jsx(u,{children:"Profile Administration"}),t.jsx(P,{children:t.jsx(b,{btnTheme:"primary",onClick:p,children:"Create New Item"})}),t.jsx(j,{columns:d,data:(i==null?void 0:i.map(o=>({id:o.id,name:o.name,status:o.status})))||[]})]})})})})};export{F as default};
+`;const S=()=>{const{fetchProfileAdminList:e,setProfileEditingById:l,removeProfileById:s,profiles:r,loadingFetch:x}=h(),a=m(),d=[{name:"Actions",width:"80px",cell:o=>t.jsxs(k,{"aria-label":"Action buttons",children:[t.jsx("button",{onClick:()=>c(o.id),"aria-label":"Edit user action",children:t.jsx(b,{})}),t.jsx("button",{onClick:()=>n(o.id),"aria-label":"Remove user action",children:t.jsx(y,{})})]})},{name:"Name",cell:o=>o.name},{name:"Status",cell:o=>o.status}],n=o=>{s(o)},c=o=>{l(o),a(`/profile-admin/edit/${o}`)},p=()=>{a("/profile-admin/create")};return u.useEffect(()=>{e()},[e]),t.jsx(T,{className:"profile-admin-container",children:t.jsx($,{className:"content-wrapper",children:t.jsx(R,{children:t.jsxs(P,{children:[t.jsx(f,{children:"Profile Administration"}),t.jsx(_,{children:t.jsx(g,{btnTheme:"primary",onClick:p,children:"Create New Item"})}),t.jsx(j,{columns:d,data:(r==null?void 0:r.map(o=>({id:o.id,name:o.name,status:o.status})))||[]})]})})})})};export{S as default};
